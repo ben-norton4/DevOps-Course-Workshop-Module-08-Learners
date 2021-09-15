@@ -51,4 +51,8 @@ jobs:
       with:
         push: true
         tags: bennorton/dotnettemplate:latest
-      
+    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "module-8-ben" #Must be unique in Heroku
+        heroku_email: "ben.norton@uk.zurich.com"
